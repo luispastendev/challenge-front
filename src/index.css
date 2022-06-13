@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-poppins;
+}
+
+.inputError{
+  @apply border-red-500 ring-red-200 ring-2;
+}
