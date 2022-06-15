@@ -6,6 +6,7 @@ import Notfound from './routes/notfound';
 import Register from './routes/register';
 import { useAuth } from './hooks/useAuth';
 import UserContext from "./lib/context";
+import Home from "./routes/home/home";
 
 function App() {
 
@@ -16,6 +17,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={
+            <Home /> 
+          }>
+          </Route>
+          <Route path="/login" element={
             <ProtectedRoute redirectPath="/dashboard">
               <Login />
             </ProtectedRoute>

@@ -31,6 +31,17 @@ module.exports = {
           800: "#287a4f",
           900: "#1b5134",
       },
+      gray: {
+        100: "#fcfcfc",
+        200: "#f9f9f9",
+        300: "#f5f5f5",
+        400: "#f2f2f2",
+        500: "#efefef",
+        600: "#bfbfbf",
+        700: "#8f8f8f",
+        800: "#606060",
+        900: "#303030"
+      },
       red: {
         100: "#ffe0df",
         200: "#ffc0c0",
@@ -54,7 +65,7 @@ module.exports = {
         900: "#0a0a0a"
       },
       white: colors.white,
-      gray: colors.gray,
+      // gray: colors.gray,
       yellow: colors.amber,
       green: colors.emerald,
       blue: colors.blue,
@@ -70,8 +81,8 @@ module.exports = {
       '3xl' : '1920px'
     },
     opacity: {
-      0: '0',
-      5: '.05',
+      0:  '0',
+      5:  '.05',
       10: '.1',
       20: '.2',
       30: '.3',
@@ -87,6 +98,11 @@ module.exports = {
       // transitionProperty: {
       //   'left': 'left',
       // },
+      backgroundImage: {
+        'cover':  "url('/public/unplash.jpg')",
+        'cover2': "url('/public/unplash2.jpg')",
+        'cover3': "url('/public/unplash3.jpg')"
+      }
       // backgroundImage: theme => ({
       //   'login-pattern-form': "url('/imgs/bg-login-left.svg')",
       //   'mobile-pattern': "url('/imgs/mobile-pattern.svg')",

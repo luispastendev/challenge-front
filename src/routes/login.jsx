@@ -1,10 +1,9 @@
 import React from 'react'
 import LoginForm from '../components/login_form'
 
-
-function Login() {
+const Login = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center sm:px-6 lg:px-8 bg-black-800">
+    <div className="min-h-screen flex flex-col justify-center items-center sm:px-6 lg:px-8 bg-black-800 w-screen">
       <LoginForm />
     </div>
   );

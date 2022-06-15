@@ -11,7 +11,7 @@ function CommentList({ setComments, comments }) {
 
   const [editComment, setEditComment] = useState(null);
 
-  // init comments
+  // load init comments
   useEffect(() => {
     callApi({
       method: 'get',
@@ -28,8 +28,8 @@ function CommentList({ setComments, comments }) {
 
   return (<div className="mb-8"> 
     {
-      comments.data.map(comment => (
-        <Comment key={ comment.id } data={ comment } editComment={ editComment } setEditComment={ setEditComment } setComments={ setComments } />        
+      comments.data.map((comment,key) => (
+        <Comment key={ key } data={ comment } editComment={ editComment } setEditComment={ setEditComment } setComments={ setComments } />        
         ))
     }
     {

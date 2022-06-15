@@ -22,6 +22,9 @@ export const useAuth = () => {
       200: () => {
         console.log("Deslog");
         removeToken();
+        setUser({
+          isLogged: false
+        })
       }
     });
   }

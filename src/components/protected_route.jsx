@@ -2,7 +2,7 @@ import { useEffect, useContext } from 'react'
 import { useNavigate } from "react-router-dom";
 import UserContext from '../lib/context';
 
-export const ProtectedRoute = ({redirectPath = '/', children}) => {
+export const ProtectedRoute = ({redirectPath = '/login', children}) => {
 
   const { canAuth, fetchUser, user } = useContext(UserContext);
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ export const ProtectedRoute = ({redirectPath = '/', children}) => {
 
     // no token
     if (!canAuth()) {
-      navigate('/');
+      navigate('/login');
     } 
     
     // no user data in state
@@ -21,7 +21,7 @@ export const ProtectedRoute = ({redirectPath = '/', children}) => {
 
     // prevent render login / register
     if (typeof user === 'object') {
-      if (user.isLogged && redirectPath !== '/') {
+      if (user.isLogged && redirectPath !== '/login') {
         navigate(redirectPath);
         return;
       }

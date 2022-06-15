@@ -55,13 +55,13 @@ function RegisterForm() {
   }
 
   return (<>
-    <div className="sm:mx-auto bg-black-700 min-w-[550px] rounded-lg">
+    <div className="sm:mx-auto bg-black-700 max-w-[550px] rounded-lg">
       <div className="py-8 px-4 shadow sm:rounded-lg sm:px-10">
-        <div className="min-h-full flex items-center justify-center py-5">
-          <div className="max-w-lg w-full space-y-8">
-            <div>
+        <div className="min-h-full flex flex-col items-center justify-center py-5">
+            <div className='text-center'>
               <h2 className="mt-6 text-center text-3xl font-extrabold text-white">EmprenD</h2>
               <p className="mt-2 text-center text-md text-black-300">Registrar una nueva cuenta</p>
+              <Link to="/" className='pt-2 block text-red-500 underline underline-offset-4'>Ir a la página principal</Link>
             </div>
             <form className="mt-8 space-y-6" onSubmit={ handleSubmit }>
               <input type="hidden" name="remember" defaultValue="true" />
@@ -122,7 +122,7 @@ function RegisterForm() {
                     Contraseña
                   </label>
                   <input
-                    type="text" 
+                    type="password" 
                     name="password" 
                     value={ password.value }
                     onChange={ handleInputChange }
@@ -147,7 +147,7 @@ function RegisterForm() {
                     Confirmación de Contraseña
                   </label>
                   <input
-                    type="text" 
+                    type="password" 
                     name="password_confirmation" 
                     value={ password_confirmation.value }
                     onChange={ handleInputChange }
@@ -185,7 +185,7 @@ function RegisterForm() {
                       : ''
                   }
                 </button>
-                <Link to="/">
+                <Link to="/login">
                   <button
                     type="submit"
                     className="group relative w-full flex items-center justify-center px-4 py-2 border border-black-300 shadow-sm text-sm font-medium rounded-md text-black-700 bg-white hover:bg-black-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black-700 top-3"
@@ -196,7 +196,6 @@ function RegisterForm() {
               </div>
             </form>
           </div>
-        </div>
       </div>
     </div>
 

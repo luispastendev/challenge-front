@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserContext from '../lib/context';
-
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -99,6 +98,7 @@ export const Navbar = () => {
                 <Disclosure.Button
                   as="a"
                   href="#"
+                  onClick={ signOut }
                   className="block px-3 py-2 rounded-md text-base font-medium text-black-400 hover:text-white hover:bg-black-700"
                 >
                   Cerrar Sesión
